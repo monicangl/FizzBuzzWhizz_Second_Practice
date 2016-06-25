@@ -5,9 +5,6 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * 如果是5的倍数, 返回Buzz;
- */
 public class BuzzHandlerTest {
     private BuzzHandler buzzHandler = new BuzzHandler(null);
 

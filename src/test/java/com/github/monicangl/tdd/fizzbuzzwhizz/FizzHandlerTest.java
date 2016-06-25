@@ -6,9 +6,6 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * 如果是3的倍数, 返回Fizz;
- */
 public class FizzHandlerTest {
 
     private FizzHandler fizzHandler = new FizzHandler(null);

@@ -5,9 +5,6 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * 如果是7的倍数, 返回Whizz;
- */
 public class WhizzHandlerTest {
     private WhizzHandler whizzHandler = new WhizzHandler(null);
 

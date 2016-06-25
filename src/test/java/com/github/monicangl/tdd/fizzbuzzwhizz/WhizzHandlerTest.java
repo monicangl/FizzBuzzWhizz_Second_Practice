@@ -9,11 +9,7 @@ import static org.junit.Assert.assertThat;
  * 如果是7的倍数, 返回Whizz;
  */
 public class WhizzHandlerTest {
-    private WhizzHandler whizzHandler;
-
-    public WhizzHandlerTest() {
-        this.whizzHandler = new WhizzHandler();
-    }
+    private WhizzHandler whizzHandler = new WhizzHandler(null);
 
     @Test
     public void should_be_able_to_return_Whizz_if_times_of_seven() {

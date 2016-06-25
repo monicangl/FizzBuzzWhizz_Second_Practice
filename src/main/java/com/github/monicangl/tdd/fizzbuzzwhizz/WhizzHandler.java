@@ -1,11 +1,8 @@
 package com.github.monicangl.tdd.fizzbuzzwhizz;
 
-public class WhizzHandler extends IHandler {
-    public WhizzHandler(IHandler nextHandler) {
+public class WhizzHandler extends BaseHandler {
+    public WhizzHandler(BaseHandler nextHandler) {
         super(nextHandler);
-    }
-
-    public WhizzHandler() {
     }
 
     @Override
@@ -14,11 +11,6 @@ public class WhizzHandler extends IHandler {
             return "Whizz";
         }
 
-        IHandler nextHandler = super.getNextHandler();
-        if (null != nextHandler) {
-            return nextHandler.handleNumber(number);
-        }
-
-        return String.valueOf(number);
+        return super.handleNumber(number);
     }
 }

@@ -5,7 +5,7 @@ public class FizzBuzzWhizzGame {
         return fizzHandler.handleNumber(number);
     }
 
-    private  IHandler whizzHandler = new WhizzHandler(null);
-    private  IHandler buzzHandler = new BuzzHandler(whizzHandler);
-    private  IHandler fizzHandler = new FizzHandler(buzzHandler);
+    private BaseHandler whizzHandler = new WhizzHandler(null);
+    private BaseHandler buzzHandler = new BuzzHandler(whizzHandler);
+    private BaseHandler fizzHandler = new FizzHandler(buzzHandler);
 }

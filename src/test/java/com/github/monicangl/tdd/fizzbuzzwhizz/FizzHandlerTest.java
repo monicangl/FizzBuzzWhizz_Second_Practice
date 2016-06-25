@@ -11,11 +11,7 @@ import static org.junit.Assert.assertThat;
  */
 public class FizzHandlerTest {
 
-    private FizzHandler fizzHandler;
-
-    public FizzHandlerTest() {
-        this.fizzHandler = new FizzHandler();
-    }
+    private FizzHandler fizzHandler = new FizzHandler(null);
 
     @Test
     public void should_be_able_to_return_original_number_if_not_times_of_three() {

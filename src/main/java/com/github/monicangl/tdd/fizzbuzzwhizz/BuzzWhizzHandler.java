@@ -13,7 +13,5 @@ public class BuzzWhizzHandler extends BaseHandler {
         return super.handleNumber(number);
     }
 
-    private int buzzNumber = 5;
-    private int whizzNumber = 7;
     private String buzzWhizzResult = "BuzzWhizz";
 }

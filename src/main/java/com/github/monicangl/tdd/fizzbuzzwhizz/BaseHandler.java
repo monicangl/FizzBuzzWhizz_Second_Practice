@@ -12,5 +12,9 @@ public abstract class BaseHandler {
         return String.valueOf(number);
     }
 
+    protected int fizzNumber = 3;
+    protected int buzzNumber = 5;
+    protected int whizzNumber = 7;
     private BaseHandler nextHandler;
+
 }

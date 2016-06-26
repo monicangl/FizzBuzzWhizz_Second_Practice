@@ -14,6 +14,5 @@ public class WhizzHandler extends BaseHandler {
         return super.handleNumber(number);
     }
 
-    private int whizzNumber = 7;
     private String whizzResult = "Whizz";
 }

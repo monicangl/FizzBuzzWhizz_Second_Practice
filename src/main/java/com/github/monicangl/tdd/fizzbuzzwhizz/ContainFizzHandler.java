@@ -18,6 +18,5 @@ public class ContainFizzHandler extends BaseHandler{
         return super.handleNumber(number);
     }
 
-    private int fizzNumber = 3;
     private String containFizzResult = "Fizz";
 }

@@ -13,6 +13,42 @@ public class FizzBuzzWhizzGameTest {
     }
 
     @Test
+    public void should_be_able_to_return_FizzBuzz_if_times_of_three_and_times_of_five() {
+        // given
+        int number = 15;
+
+        // when
+        String result = fizzBuzzWhizzGame.handleNumber(number);
+
+        // then
+        assertThat(result, is("FizzBuzz"));
+    }
+
+    @Test
+    public void should_be_able_to_return_FizzWhizz_if_times_of_three_and_times_of_seven_and_not_times_of_five() {
+        // given
+        int number = 21;
+
+        // when
+        String result = fizzBuzzWhizzGame.handleNumber(number);
+
+        // then
+        assertThat(result, is("FizzWhizz"));
+    }
+
+    @Test
+    public void should_be_able_to_return_BuzzWhizz_if_times_of_five_and_times_of_seven_and_not_times_of_three() {
+        // given
+        int number = 35;
+
+        // when
+        String result = fizzBuzzWhizzGame.handleNumber(number);
+
+        // then
+        assertThat(result, is("BuzzWhizz"));
+    }
+
+    @Test
     public void should_be_able_to_return_Fizz_if_times_of_three() {
         // given
         int number = 3;

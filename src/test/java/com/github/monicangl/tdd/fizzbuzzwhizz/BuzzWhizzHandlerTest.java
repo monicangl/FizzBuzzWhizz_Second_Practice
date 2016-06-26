@@ -6,7 +6,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class BuzzWhizzHandlerTest {
-    private BuzzWhizzHandler buzzWhizzHandler = new BuzzWhizzHandler();
+    private BuzzWhizzHandler buzzWhizzHandler = new BuzzWhizzHandler(null);
 
     @Test
     public void should_be_able_to_return_BuzzWhizz_if_times_of_five_and_times_of_seven() {
@@ -24,6 +24,18 @@ public class BuzzWhizzHandlerTest {
     public void should_be_able_to_return_original_number_if_times_of_five_and_not_times_of_seven() {
         // given
         int number = 5;
+
+        // when
+        String result = buzzWhizzHandler.handleNumber(number);
+
+        // then
+        assertThat(result, is(String.valueOf(number)));
+    }
+
+    @Test
+    public void should_be_able_to_return_original_number_if_not_times_of_five_and_times_of_seven() {
+        // given
+        int number = 7;
 
         // when
         String result = buzzWhizzHandler.handleNumber(number);

@@ -7,10 +7,13 @@ public class BuzzHandler extends BaseHandler {
 
     @Override
     public String handleNumber(int number) {
-        if (number % 5 == 0) {
-            return "Buzz";
+        if (number % buzzNumber == 0) {
+            return buzzResult;
         }
 
         return super.handleNumber(number);
     }
+
+    private int buzzNumber = 5;
+    private String buzzResult = "Buzz";
 }

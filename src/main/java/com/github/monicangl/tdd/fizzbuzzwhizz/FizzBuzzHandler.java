@@ -6,10 +6,14 @@ public class FizzBuzzHandler extends BaseHandler{
     }
 
     public String handleNumber(int number) {
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
+        if (number % fizzNumber == 0 && number % buzzNumber == 0) {
+            return fizzBuzzResult;
         }
 
         return super.handleNumber(number);
     }
+
+    private int fizzNumber = 3;
+    private int buzzNumber = 5;
+    private String fizzBuzzResult = "FizzBuzz";
 }

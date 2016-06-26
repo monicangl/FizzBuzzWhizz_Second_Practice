@@ -8,8 +8,8 @@ public class ContainFizzHandler extends BaseHandler{
     public String handleNumber(int number) {
         int temp = number;
         while (temp > 0) {
-            if (temp % 10 == 3) {
-                return "Fizz";
+            if (temp % 10 == fizzNumber) {
+                return containFizzResult;
             } else {
                 temp /= 10;
             }
@@ -17,4 +17,7 @@ public class ContainFizzHandler extends BaseHandler{
 
         return super.handleNumber(number);
     }
+
+    private int fizzNumber = 3;
+    private String containFizzResult = "Fizz";
 }

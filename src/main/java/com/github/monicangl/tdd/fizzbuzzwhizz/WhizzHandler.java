@@ -7,10 +7,13 @@ public class WhizzHandler extends BaseHandler {
 
     @Override
     public String handleNumber(int number) {
-        if (number % 7 == 0) {
-            return "Whizz";
+        if (number % whizzNumber == 0) {
+            return whizzResult;
         }
 
         return super.handleNumber(number);
     }
+
+    private int whizzNumber = 7;
+    private String whizzResult = "Whizz";
 }

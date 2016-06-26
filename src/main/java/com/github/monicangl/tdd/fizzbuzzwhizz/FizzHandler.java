@@ -7,10 +7,13 @@ public class FizzHandler extends BaseHandler {
 
     @Override
     public String handleNumber(int number) {
-        if (number % 3 == 0) {
-            return "Fizz";
+        if (number % fizzNumber == 0) {
+            return fizzResult;
         }
 
         return super.handleNumber(number);
     }
+
+    private int fizzNumber = 3;
+    private String fizzResult = "Fizz";
 }

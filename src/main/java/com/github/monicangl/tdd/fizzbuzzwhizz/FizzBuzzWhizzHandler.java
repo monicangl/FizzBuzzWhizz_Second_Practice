@@ -7,10 +7,15 @@ public class FizzBuzzWhizzHandler extends BaseHandler{
     }
 
     public String handleNumber(int number) {
-        if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
-            return "FizzBuzzWhizz";
+        if (number % fizzNumber == 0 && number % buzzNumber == 0 && number % whizzNumber == 0) {
+            return fizzBuzzWhizzResult;
         }
 
         return super.handleNumber(number);
     }
+
+    private int fizzNumber = 3;
+    private int buzzNumber = 5;
+    private int whizzNumber = 7;
+    private String fizzBuzzWhizzResult = "FizzBuzzWhizz";
 }

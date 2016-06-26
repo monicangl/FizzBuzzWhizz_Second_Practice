@@ -2,7 +2,7 @@ package com.github.monicangl.tdd.fizzbuzzwhizz;
 
 public class FizzBuzzWhizzGameRule {
     public String handleNumber(int number) {
-        return fizzBuzzHandler.handleNumber(number);
+        return containFizzHandler.handleNumber(number);
     }
 
     private BaseHandler whizzHandler = new WhizzHandler(null);
@@ -11,4 +11,6 @@ public class FizzBuzzWhizzGameRule {
     private BuzzWhizzHandler buzzWhizzHandler = new BuzzWhizzHandler(fizzHandler);
     private FizzWhizzHandler fizzWhizzHandler = new FizzWhizzHandler(buzzWhizzHandler);
     private FizzBuzzHandler fizzBuzzHandler = new FizzBuzzHandler(fizzWhizzHandler);
+    private FizzBuzzWhizzHandler fizzBuzzWhizzHandler = new FizzBuzzWhizzHandler(fizzBuzzHandler);
+    private ContainFizzHandler containFizzHandler = new ContainFizzHandler(fizzBuzzWhizzHandler);
 }

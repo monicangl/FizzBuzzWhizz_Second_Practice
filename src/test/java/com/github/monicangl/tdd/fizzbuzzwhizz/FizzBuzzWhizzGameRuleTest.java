@@ -5,13 +5,8 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class FizzBuzzWhizzGameTest {
-    private FizzBuzzWhizzGame fizzBuzzWhizzGame;
-
-    public FizzBuzzWhizzGameTest() {
-        FizzBuzzWhizzGameRule fizzBuzzWhizzGameRule = new FizzBuzzWhizzGameRule();
-        this.fizzBuzzWhizzGame = new FizzBuzzWhizzGame(fizzBuzzWhizzGameRule);
-    }
+public class FizzBuzzWhizzGameRuleTest {
+    private FizzBuzzWhizzGameRule fizzBuzzWhizzGameRule = new FizzBuzzWhizzGameRule();
 
     @Test
     public void should_be_able_to_return_Fizz_if_contain_three() {
@@ -19,7 +14,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 13;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("Fizz"));
@@ -31,7 +26,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 105;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("FizzBuzzWhizz"));
@@ -43,7 +38,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 15;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("FizzBuzz"));
@@ -55,7 +50,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 21;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("FizzWhizz"));
@@ -67,7 +62,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 70;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("BuzzWhizz"));
@@ -79,7 +74,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 6;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("Fizz"));
@@ -91,7 +86,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 5;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("Buzz"));
@@ -103,7 +98,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 7;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is("Whizz"));
@@ -115,7 +110,7 @@ public class FizzBuzzWhizzGameTest {
         int number = 1;
 
         // when
-        String result = fizzBuzzWhizzGame.handleNumber(number);
+        String result = fizzBuzzWhizzGameRule.handleNumber(number);
 
         // then
         assertThat(result, is(String.valueOf(number)));

@@ -12,9 +12,13 @@ public abstract class BaseHandler {
         return String.valueOf(number);
     }
 
-    protected int fizzNumber = 3;
-    protected int buzzNumber = 5;
-    protected int whizzNumber = 7;
+    public static void setFizzNumber(int number) {fizzNumber = number;}
+    public static void setBuzzNumber(int number) {buzzNumber = number;}
+    public static void setWhizzNumber(int number) {whizzNumber = number;}
+
+    protected static int fizzNumber;
+    protected static int buzzNumber;
+    protected static int whizzNumber;
     private BaseHandler nextHandler;
 
 }

@@ -1,13 +1,23 @@
 package com.github.monicangl.tdd.fizzbuzzwhizz;
 
+import java.util.Vector;
+
 public class FizzBuzzWhizzGame {
-    public FizzBuzzWhizzGame(FizzBuzzWhizzGameRule fizzBuzzWhizzGameRule) {
-        this.fizzBuzzWhizzGameRule = fizzBuzzWhizzGameRule;
+
+
+    public void countOff() {
+        for (Student student : students) {
+            System.out.println(student.countOffNumber(gameRule));
+        }
     }
 
-    public String handleNumber(int number) {
-        return fizzBuzzWhizzGameRule.handleNumber(number);
+    public void setStudents(Vector<Student> students) {
+        this.students = students;
+    }
+    public void setGameRule(FizzBuzzWhizzGameRule gameRule) {
+        this.gameRule = gameRule;
     }
 
-    private FizzBuzzWhizzGameRule fizzBuzzWhizzGameRule;
+    private Vector<Student> students;
+    private FizzBuzzWhizzGameRule gameRule;
 }

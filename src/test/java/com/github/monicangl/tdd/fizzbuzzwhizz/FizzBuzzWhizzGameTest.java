@@ -9,7 +9,8 @@ public class FizzBuzzWhizzGameTest {
     private FizzBuzzWhizzGame fizzBuzzWhizzGame;
 
     public FizzBuzzWhizzGameTest() {
-        this.fizzBuzzWhizzGame = new FizzBuzzWhizzGame();
+        FizzBuzzWhizzGameRule fizzBuzzWhizzGameRule = new FizzBuzzWhizzGameRule();
+        this.fizzBuzzWhizzGame = new FizzBuzzWhizzGame(fizzBuzzWhizzGameRule);
     }
 
     @Test

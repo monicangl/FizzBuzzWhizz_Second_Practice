@@ -11,7 +11,7 @@ public class WhizzHandler extends BaseHandler {
             return whizzResult;
         }
 
-        return super.handleNumber(number);
+        return passRequest(number);
     }
 
     private String whizzResult = "Whizz";

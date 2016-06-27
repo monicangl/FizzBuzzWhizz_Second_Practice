@@ -3,8 +3,6 @@ package com.github.monicangl.tdd.fizzbuzzwhizz;
 import java.util.Vector;
 
 public class FizzBuzzWhizzGame {
-
-
     public void countOff() {
         for (Student student : students) {
             System.out.println(student.countOffNumber(gameRule));

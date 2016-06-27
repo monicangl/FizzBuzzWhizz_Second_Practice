@@ -6,13 +6,14 @@ public class FizzBuzzWhizzHandler extends BaseHandler{
         super(nextHandler);
     }
 
+    @Override
     public String handleNumber(int number) {
         if (number % fizzNumber == 0 && number % buzzNumber == 0 && number % whizzNumber == 0) {
             return fizzBuzzWhizzResult;
         }
 
-        return super.handleNumber(number);
+        return passRequest(number);
     }
 
-    private String fizzBuzzWhizzResult = "FizzBuzzWhizz";
+    private static final String fizzBuzzWhizzResult = "FizzBuzzWhizz";
 }

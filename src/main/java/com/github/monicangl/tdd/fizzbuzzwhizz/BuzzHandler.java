@@ -11,8 +11,8 @@ public class BuzzHandler extends BaseHandler {
             return buzzResult;
         }
 
-        return super.handleNumber(number);
+        return passRequest(number);
     }
 
-    private String buzzResult = "Buzz";
+    private static final String buzzResult = "Buzz";
 }

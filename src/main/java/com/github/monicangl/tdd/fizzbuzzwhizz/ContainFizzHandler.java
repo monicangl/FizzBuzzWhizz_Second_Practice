@@ -5,6 +5,7 @@ public class ContainFizzHandler extends BaseHandler{
         super(nextHandler);
     }
 
+    @Override
     public String handleNumber(int number) {
         int temp = number;
         while (temp > 0) {
@@ -15,8 +16,8 @@ public class ContainFizzHandler extends BaseHandler{
             }
         }
 
-        return super.handleNumber(number);
+        return passRequest(number);
     }
 
-    private String containFizzResult = "Fizz";
+    private static final String containFizzResult = "Fizz";
 }

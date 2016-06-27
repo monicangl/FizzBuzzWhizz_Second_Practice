@@ -11,8 +11,8 @@ public class FizzHandler extends BaseHandler {
             return fizzResult;
         }
 
-        return super.handleNumber(number);
+        return passRequest(number);
     }
 
-    private String fizzResult = "Fizz";
+    private static final String fizzResult = "Fizz";
 }

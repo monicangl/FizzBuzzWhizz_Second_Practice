@@ -17,13 +17,12 @@ public class FizzBuzzWhizzGameTest {
 
         FizzBuzzWhizzGameRule fizzBuzzWhizzGameRule = new FizzBuzzWhizzGameRule();
         fizzBuzzWhizzGameRule.setFizzBuzzWhizzNumber(teacher.getNumbers());
+        fizzBuzzWhizzGame.setGameRule(fizzBuzzWhizzGameRule);
 
-        Vector<Student> students = new Vector<Student>();
+        Vector<Student> students = new Vector<>();
         for (int i = 0; i < 100; ++i) {
             students.insertElementAt(new Student(i + 1), i);
         }
-
-        fizzBuzzWhizzGame.setGameRule(fizzBuzzWhizzGameRule);
         fizzBuzzWhizzGame.setStudents(students);
     }
 
